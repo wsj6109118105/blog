@@ -8,7 +8,7 @@ import 'mavon-editor/dist/css/index.css'
 import mavonEditor from 'mavon-editor'
 
 Vue.config.productionTip = false
-let axios = require('axios')
+//let axios = require('axios')
 axios.defaults.baseURL='http://localhost:8088'
 Vue.prototype.$ajax = axios
 axios.defaults.withCredentials = true
