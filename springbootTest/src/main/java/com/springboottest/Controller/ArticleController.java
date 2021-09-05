@@ -2,6 +2,7 @@ package com.springboottest.Controller;
 
 import com.springboottest.Result.Result;
 import com.springboottest.Service.JotterArticleService;
+import com.springboottest.Utils.Mypage;
 import com.springboottest.pojo.JotterArticle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -27,7 +28,7 @@ public class ArticleController {
     }
 
     @GetMapping("/article/{size}/{page}")
-    public Page listArticles(@PathVariable("size") int size,@PathVariable("page") int page){
+    public Mypage listArticles(@PathVariable("size") int size, @PathVariable("page") int page){
         return jotterArticleService.list(page-1,size);
     }
 
